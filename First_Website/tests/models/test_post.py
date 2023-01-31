@@ -1,6 +1,6 @@
 import pytest
 
-from FirstWebsite.First_Website.blog.factories import PostFactory
+from blog.factories import PostFactory
 
 
 @pytest.fixture 
