@@ -8,7 +8,7 @@ from .models import Post
 
 faker = FakerFactory.create()
 
-class UserFactory(factory.django.DjangoModeFactory):
+class UserFactory(factory.django.DjangoModelFactory):
     class Meta: 
         model = User 
 
@@ -26,7 +26,7 @@ class UserFactory(factory.django.DjangoModeFactory):
         return user 
 
     
-class PostFactory(factory.django.DjangoModeFactory):
+class PostFactory(factory.django.DjangoModelFactory):
     title = factory.LazyAttribute(lambda x: faker.sentece())
     created_on = factory.LazyAttribute(lambda x: now())
     author = factory.SubFactory(UserFactory)
